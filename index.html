@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phạm Quốc Trung - Trang Cá Nhân</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+ <!-- Header & Navbar -->
+<header class="header">
+    <nav class="navbar">
+      <div class="logo">Phạm Quốc Trung</div>
+      <ul class="nav-menu">
+        <li><a href="#gioithieu">Giới thiệu</a></li>
+        <li><a href="#duan">Dự án</a></li>
+        <li><a href="#lienhe">Liên hệ</a></li>
+      </ul>
+    </nav>
+    <!-- Hero Section with Slider -->
+    <div class="hero">
+      <div class="slider">
+        <div class="slides">
+          <div class="slide">
+            <img src="" alt="Slide 1" />
+          </div>
+          <div class="slide">
+            <img src="" alt="Slide 2" />
+          </div>
+          <div class="slide">
+            <img src="" alt="Slide 3" />
+          </div>
+        </div>
+      </div>
+      <div class="hero-text">
+        <h1>Xin chào, tôi là Phạm Quốc Trung</h1>
+        <p>Lập trình viên &amp; Nhà thiết kế chuyên nghiệp</p>
+        <a href="#lienhe" class="btn">Liên hệ ngay</a>
+      </div>
+    </div>
+  </header>
+
+ <!-- Giới thiệu -->
+<section id="gioithieu" class="section">
+    <div class="container">
+      <h2>Giới thiệu</h2>
+      <img src="images/anhcanhan.jpg" alt="Giới thiệu" class="intro-image" />
+      <p>Tôi là Phạm Quốc Trung, với nhiều năm kinh nghiệm trong lập trình và thiết kế. Tôi đam mê tạo ra những trải nghiệm số đẹp mắt, hiện đại và hiệu quả cho người dùng.</p>
+    </div>
+  </section>
+
+<!-- Dự án -->
+  <section id="duan" class="section">
+    <div class="container">
+      <h2>Dự án</h2>
+      <div class="project-grid">
+        <div class="project-item">
+          <h3><i class="fa-solid fa-code"></i> Dự án 1</h3>
+          <p>Ứng dụng web chuyên nghiệp với giao diện đẳng cấp và tính năng hiện đại.</p>
+        </div>
+        <div class="project-item">
+          <h3><i class="fa-solid fa-paint-brush"></i> Dự án 2</h3>
+          <p>Thiết kế đáp ứng trên mọi thiết bị với hiệu ứng chuyển động mượt mà.</p>
+        </div>
+        <div class="project-item">
+          <h3><i class="fa-solid fa-mobile-screen-button"></i> Dự án 3</h3>
+          <p>Giải pháp sáng tạo cho doanh nghiệp với các tính năng tối ưu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Liên hệ -->
+  <section id="lienhe" class="section contact">
+    <div class="container">
+      <h2>Liên hệ</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Họ và tên" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Nội dung" required></textarea>
+        <button type="submit" class="btn">Gửi liên hệ</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Phạm Quốc Trung. Bảo lưu mọi quyền.</p>
+    </div>
+  </footer>
+
+  <!-- Slider JavaScript -->
+  <script>
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+    let slideIndex = 0;
+
+    function showSlides() {
+      slideIndex = (slideIndex + 1) % totalSlides;
+      slides.style.transform = 'translateX(' + (-slideIndex * 100) + '%)';
+    }
+    setInterval(showSlides, 5000);
+  </script>
+</body>
+</html>
